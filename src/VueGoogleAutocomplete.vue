@@ -50,8 +50,8 @@
             type: String,
             default: 'address'
           },
-	  
-	  fields: {
+
+          fields: {
             type: Array,
             default: () => []
           },
@@ -130,8 +130,8 @@
           if (this.types) {
             options.types = [this.types];
           }
-	  
-	  if (this.fields) {
+
+          if (this.fields) {
             options.fields = this.fields.length === 0 ? null : this.fields;
           }
 

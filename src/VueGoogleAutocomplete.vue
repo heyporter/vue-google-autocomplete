@@ -50,6 +50,11 @@
             type: String,
             default: 'address'
           },
+	  
+	  fields: {
+            type: Array,
+            default: () => []
+          },
 
           country: {
             type: [String, Array],
@@ -124,6 +129,10 @@
 
           if (this.types) {
             options.types = [this.types];
+          }
+	  
+	  if (this.fields) {
+            options.fields = this.fields.length === 0 ? null : this.fields;
           }
 
           if (this.country) {
